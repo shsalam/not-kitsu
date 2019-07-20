@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { fetchUpcoming } from "../actions";
 import ReactTooltip from "react-tooltip";
+import { Link } from "react-router-dom";
 
-class UpcomingList extends Component {
-  componentDidMount() {
-    this.props.fetchUpcoming();
-  }
+class SearchList extends Component {
   renderList() {
-    let length = this.props.length;
     if (this.props.upcoming.data !== undefined) {
-      return this.props.upcoming.data.slice(0, length).map(item => (
+      return this.props.upcoming.data.slice(0, 5).map(item => (
         <div className="special column" key={item.id}>
           <Link to={`anime/detail/${item.id}`}>
             <div className="poster-overlay">
@@ -36,7 +31,7 @@ class UpcomingList extends Component {
   render() {
     return (
       <div>
-        <h6 className="header">UPCOMING</h6>
+        <h6 className="header">RESULTS</h6>
 
         <div className="five column doubling ui grid clear-margins">
           {this.renderList()}
@@ -45,13 +40,11 @@ class UpcomingList extends Component {
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    upcoming: state.upcoming
-  };
-};
 
-export default connect(
-  mapStateToProps,
-  { fetchUpcoming }
-)(UpcomingList);
+function mapStateToProps(state) {
+  return {
+    items: state.items
+  };
+}
+
+export default connect(mapStateToProps)(SearchList);

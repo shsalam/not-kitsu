@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Search from "./Search";
+import SearchList from "./SearchList";
 import TrendingList from "./TrendingList";
 import TopList from "./TopList";
 import UpcomingList from "./UpcomingList";
@@ -10,6 +12,7 @@ export default class AI extends Component {
   render() {
     return (
       <div className="ui grid">
+        <Search length={5} />
         <div className="ui row">
           <div className="twelve wide column">
             <TrendingList length={5} />
