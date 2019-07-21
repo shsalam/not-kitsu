@@ -12,16 +12,20 @@ export default class AI extends Component {
   render() {
     return (
       <div className="ui grid">
-        <Search length={5} />
+        <div className="ui row">
+          <div className="twelve wide column">
+            <Search length={5} />
+          </div>
+          <div className="four wide column">
+            <Sidebar />
+          </div>
+        </div>
         <div className="ui row">
           <div className="twelve wide column">
             <TrendingList length={5} />
             <Link to={`/anime/trending`}>
               <div className="view-more">view more</div>
             </Link>
-          </div>
-          <div className="four wide column">
-            <Sidebar />
           </div>
         </div>
         <div className="ui row">

@@ -406,3 +406,47 @@ html CSS Result EDIT ON body {
     left: 100%;
   }
 }
+
+.ui.search .prompt {
+  width: 100% !important;
+}
+
+.rblock {
+  display: block !important;
+}
+
+.rcell {
+  display: table-cell !important;
+}
+
+.search-image {
+  width: 45px;
+  height: 64px;
+}
+
+.ui.category.search > .results .category .result:hover,
+.ui.search > .results .result:hover {
+  background: none;
+}
+
+.ui.search > .results .result {
+  display: inline-block !important;
+}
+
+.ui.category.search > .results .category > .name {
+  width: 0em !important;
+}
+
+.ui.search .prompt {
+  width: 100% !important;
+  line-height: 50px;
+  height: 50px;
+  outline: 0;
+  font-size: 1em;
+  box-shadow: none;
+  text-indent: 0;
+  padding-left: 50px;
+  padding-right: 40px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px !important;
+}

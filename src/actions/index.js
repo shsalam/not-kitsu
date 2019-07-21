@@ -37,6 +37,5 @@ export const fetchHighest = () => async dispatch => {
 
 export const filterSearch = text => async dispatch => {
   const response = await anime.get(`/anime?filter[text]=${text}`);
-  response.data.text = text;
   dispatch({ type: FILTER_SEARCH, payload: response.data });
 };
