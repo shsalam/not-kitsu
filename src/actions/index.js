@@ -6,6 +6,7 @@ import { FETCH_UPCOMING } from "./types";
 import { FETCH_POPULAR } from "./types";
 import { FETCH_HIGHEST } from "./types";
 import { FILTER_SEARCH } from "./types";
+import { FETCH_CATEGORIES } from "./types";
 export const fetchTrending = () => async dispatch => {
   const response = await anime.get("/trending/anime");
   dispatch({ type: FETCH_TRENDING, payload: response.data });
@@ -38,4 +39,11 @@ export const fetchHighest = () => async dispatch => {
 export const filterSearch = text => async dispatch => {
   const response = await anime.get(`/anime?filter[text]=${text}`);
   dispatch({ type: FILTER_SEARCH, payload: response.data });
+};
+
+export const fetchCategories = () => async dispatch => {
+  const response = await anime.get(
+    "/categories?page%5Blimit%5D=40&page%5Boffset%5D=0&sort=-totalMediaCount"
+  );
+  dispatch({ type: FETCH_CATEGORIES, payload: response.data });
 };

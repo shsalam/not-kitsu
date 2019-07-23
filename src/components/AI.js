@@ -15,49 +15,33 @@ export default class AI extends Component {
         <div className="ui row">
           <div className="twelve wide column">
             <Search length={5} />
-          </div>
-          <div className="four wide column">
-            <Sidebar />
-          </div>
-        </div>
-        <div className="ui row">
-          <div className="twelve wide column">
             <TrendingList length={5} />
             <Link to={`/anime/trending`}>
               <div className="view-more">view more</div>
             </Link>
-          </div>
-        </div>
-        <div className="ui row">
-          <div className="twelve wide column">
+            <br />
             <TopList length={5} />
             <Link to={`/anime/top-anime`}>
               <div className="view-more">view more</div>
             </Link>
-          </div>
-        </div>
-        <div className="ui row">
-          <div className="twelve wide column">
+            <br />
             <UpcomingList length={5} />
             <Link to={`/anime/top-anime`}>
               <div className="view-more">view more</div>
             </Link>
-          </div>
-        </div>
-        <div className="ui row">
-          <div className="twelve wide column">
+            <br />
             <HighestList length={5} />
             <Link to={`/anime/top-anime`}>
               <div className="view-more">view more</div>
             </Link>
-          </div>
-        </div>
-        <div className="ui row">
-          <div className="twelve wide column">
+            <br />
             <PopularList length={5} />
             <Link to={`/anime/top-anime`}>
               <div className="view-more">view more</div>
             </Link>
+          </div>
+          <div className="four wide column categories">
+            <Sidebar />
           </div>
         </div>
       </div>
