@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { FILTER_SEARCH } from "../actions/types";
 
 export default (state = [], action) => {

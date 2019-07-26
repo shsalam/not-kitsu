@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { FETCH_TRENDING } from "../actions/types";
 
 export default (state = [], action) => {

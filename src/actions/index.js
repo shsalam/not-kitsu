@@ -1,5 +1,4 @@
 import anime from "../apis/anime";
-import history from "../history";
 import { FETCH_TRENDING } from "./types";
 import { FETCH_TOP } from "./types";
 import { FETCH_UPCOMING } from "./types";
@@ -8,6 +7,7 @@ import { FETCH_HIGHEST } from "./types";
 import { FILTER_SEARCH } from "./types";
 import { FETCH_CATEGORIES } from "./types";
 import { FETCH_DETAIL } from "./types";
+import { FETCH_DETAIL_GENRE } from "./types";
 export const fetchTrending = () => async dispatch => {
   const response = await anime.get("/trending/anime");
   dispatch({ type: FETCH_TRENDING, payload: response.data });
@@ -52,4 +52,9 @@ export const fetchCategories = () => async dispatch => {
 export const fetchDetail = id => async dispatch => {
   const response = await anime.get(`/anime/${id}`);
   dispatch({ type: FETCH_DETAIL, payload: response.data });
+};
+
+export const fetchDetailGenre = id => async dispatch => {
+  const response = await anime.get(`/anime/${id}/genres`);
+  dispatch({ type: FETCH_DETAIL_GENRE, payload: response.data });
 };
