@@ -3,6 +3,10 @@ import TrendingList from "./TrendingList";
 
 export default class CompleteTrending extends Component {
   render() {
-    return <TrendingList length={10} />;
+    return (
+      <div className="ui container">
+        <TrendingList length={10} />
+      </div>
+    );
   }
 }

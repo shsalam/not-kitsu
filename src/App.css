@@ -454,10 +454,44 @@ html CSS Result EDIT ON body {
 /*CATEGORIES*/
 .categories {
   background: #fff;
+  position: -webkit-sticky;
+  position: sticky !important;
+  top: 20px;
+  height: 40%;
 }
 .margin-top {
   margin-top: 10px !important;
 }
 .margin-bottom {
   margin-bottom: 4px !important;
+}
+
+/*DETAILS*/
+.user-cover,
+.user-cover .cover-photo {
+  height: 400px;
+  position: relative;
+  width: 100%;
+}
+
+.user-cover .cover-photo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.user-cover .dark-cover-overlay {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.media-poster {
+  width: 195px;
+  float: left;
+  position: relative;
+  top: -142px;
+  right: 15px;
 }

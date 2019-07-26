@@ -6,6 +6,7 @@ import popularReducer from "./popularReducer";
 import highestReducer from "./highestReducer";
 import filterReducer from "./filterReducer";
 import categoryReducer from "./categoryReducer";
+import detailReducer from "./detailReducer";
 export default combineReducers({
   trending: trendingReducer,
   top: topReducer,
@@ -13,5 +14,6 @@ export default combineReducers({
   popular: popularReducer,
   highest: highestReducer,
   filter: filterReducer,
-  categories: categoryReducer
+  categories: categoryReducer,
+  detail: detailReducer
 });
