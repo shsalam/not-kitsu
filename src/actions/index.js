@@ -1,13 +1,17 @@
 import anime from "../apis/anime";
-import { FETCH_TRENDING } from "./types";
-import { FETCH_TOP } from "./types";
-import { FETCH_UPCOMING } from "./types";
-import { FETCH_POPULAR } from "./types";
-import { FETCH_HIGHEST } from "./types";
-import { FILTER_SEARCH } from "./types";
-import { FETCH_CATEGORIES } from "./types";
-import { FETCH_DETAIL } from "./types";
-import { FETCH_DETAIL_GENRE } from "./types";
+
+import {
+  FETCH_TRENDING,
+  FETCH_TOP,
+  FETCH_UPCOMING,
+  FETCH_POPULAR,
+  FETCH_HIGHEST,
+  FILTER_SEARCH,
+  FETCH_CATEGORIES,
+  FETCH_DETAIL,
+  FETCH_DETAIL_GENRE
+} from "./types";
+
 export const fetchTrending = () => async dispatch => {
   const response = await anime.get("/trending/anime");
   dispatch({ type: FETCH_TRENDING, payload: response.data });

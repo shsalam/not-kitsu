@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import Search from "./Search";
-import SearchList from "./SearchList";
-import TrendingList from "./TrendingList";
-import TopList from "./TopList";
-import UpcomingList from "./UpcomingList";
-import HighestList from "./HighestList";
-import PopularList from "./PopularList";
-import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
-export default class AI extends Component {
+
+import Search from "components/Search";
+import SearchList from "components/SearchList";
+import TrendingList from "components/TrendingList";
+import TopList from "components/TopList";
+import UpcomingList from "components/UpcomingList";
+import HighestList from "components/HighestList";
+import PopularList from "components/PopularList";
+import Sidebar from "components/Sidebar";
+
+class Main extends Component {
   render() {
     return (
       <div className="ui container">
@@ -50,3 +52,5 @@ export default class AI extends Component {
     );
   }
 }
+
+export default Main;
