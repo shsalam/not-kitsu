@@ -5,9 +5,9 @@ import { fetchDetail, fetchDetailGenre } from "actions";
 import { Image } from "components";
 import backup from "assets/my-backup.png";
 class Details extends Component {
-  componentDidMount() {
-    this.props.fetchDetail(this.props.match.params.id);
-    this.props.fetchDetailGenre(this.props.match.params.id);
+  async componentDidMount() {
+    await this.props.fetchDetail(this.props.match.params.id);
+    await this.props.fetchDetailGenre(this.props.match.params.id);
   }
   renderGenre() {
     if (this.props.genre.data !== undefined) {

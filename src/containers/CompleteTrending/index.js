@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import TrendingList from "components/TrendingList";
+import List from "components/List";
 
 class CompleteTrending extends Component {
   render() {
-    return <div className="ui container">{<TrendingList length={10} />}</div>;
+    return <div className="ui container">{<List length={10} />}</div>;
   }
 }
 

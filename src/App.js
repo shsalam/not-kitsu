@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Router, Route, Switch } from "react-router-dom";
 
-import { Main, Details, CompleteTrending } from "containers/index.js";
+import { Main, Details, CompleteTrending } from "containers/index";
 import Navigation from "components/Navigation";
 
 import history from "helpers/history";
 import "App.css";
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <Router history={history}>
@@ -21,3 +21,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default App;

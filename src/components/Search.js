@@ -53,9 +53,7 @@ class Search extends Component {
                 this.props.filterSearch(e.target.value);
               }}
             />
-            <h6>
-              Or, browse with the <i>advanced search</i>
-            </h6>
+
             <div className="results transition visible rblock">
               {this.renderList()}
             </div>
